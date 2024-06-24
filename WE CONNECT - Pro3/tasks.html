@@ -283,18 +283,18 @@ function loadEmployeeNames() {
             .catch(error => console.error('Error fetching employee names:', error));
     }
 
-function selectAll(){
-  let sel = document.getElementById("gg");
-  let names = fetch('rawaa/infoemployees.json')
+// function selectAll(){
+//   let sel = document.getElementById("gg");
+//   let names = fetch('rawaa/infoemployees.json')
 
-  var aallNames = []
-  sel.addEventListener("click", function{
-  for(let i=0; i < names.length; i++){
-      allNames.push(i.FullName)
-      console.log
-  }
- })
-}
+//   var aallNames = []
+//   sel.addEventListener("click", function{
+//   for(let i=0; i < names.length; i++){
+//       allNames.push(i.FullName)
+//       console.log
+//   }
+//  })
+// }
 
 function loadApplications() {
     const applications = JSON.parse(localStorage.getItem('taskApplications')) || [];
