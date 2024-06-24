@@ -11,6 +11,12 @@ async function DatfetchJsona() {
         console.error("Error fetching the JSON data:", error);
     }
 }
+
+// عمل فنكشن البحث
+function searchEmployee() {
+    const searchInput = document.getElementById("searchInput").value;
+    populateTable(searchInput);
+}
 // هون فنكشن لأعبي بيانات الجدول  من خلال جبت البيانات يلي باللوكل وحولتهل لجافا سكريبت  واستدعيت الجدول  وعملت فنكشن السهم ليمر على كل موظف ويعبي بيانات الجدول 
 function populateTable(searchName = "") {
     const storedData = localStorage.getItem("hrdata");
@@ -62,11 +68,7 @@ function populateTable(searchName = "") {
         });
     }
 }
-// عمل فنكشن البحث
-function searchEmployee() {
-    const searchInput = document.getElementById("searchInput").value;
-    populateTable(searchInput);
-}
+
 // كانت مشكلة الكودمش راضي يتنفد كنت ناسية استدعيه
 DatfetchJsona(); 
 
@@ -82,7 +84,9 @@ $(document).ready(function(){
 
 
 
-
+// array.forEach(element => {
+    
+// });
 
 
 
