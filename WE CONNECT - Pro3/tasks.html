@@ -201,7 +201,9 @@ th {
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name1">Name:</label>
-                        <select id="name1" name="name1" required></select>
+                        <select id="name1" name="name1" required>
+                          <option id="gg">Select All</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="task">Task:</label>
@@ -223,7 +225,7 @@ th {
                     
                 </div>
                 <div class="form-group submit-group">
-                    <button type="submit">Submit</button>
+                    <button type="submit" style="background-color: #00bbf0;">Submit</button>
                     </div>
                 
             </form>
@@ -280,6 +282,19 @@ function loadEmployeeNames() {
             })
             .catch(error => console.error('Error fetching employee names:', error));
     }
+
+// function selectAll(){
+//   let sel = document.getElementById("gg");
+//   let names = fetch('rawaa/infoemployees.json')
+
+//   var aallNames = []
+//   sel.addEventListener("click", function{
+//   for(let i=0; i < names.length; i++){
+//       allNames.push(i.FullName)
+//       console.log
+//   }
+//  })
+// }
 
 function loadApplications() {
     const applications = JSON.parse(localStorage.getItem('taskApplications')) || [];

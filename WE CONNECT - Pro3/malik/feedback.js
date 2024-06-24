@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   var contacts = JSON.parse(localStorage.getItem("contacts")) || [];
   console.log(contacts);
-
+  contacts.reverse(); //to reverse the feedback to be new to old
   var tableBody = document.getElementById("contactTableBody");
 
   contacts.forEach(function (contact) {
